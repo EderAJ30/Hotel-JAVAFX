@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="813.0" style="-fx-background-color: #002847;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controller.ModificarHabitacionController">
+   <bottom>
+      <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="814.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNuevo" layoutX="271.0" layoutY="20.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="94.0" stylesheets="@../css/application.css" text="Nueva" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" prefHeight="38.0" prefWidth="110.0" stylesheets="@../css/application.css" text="Modificar" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnCancelar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="38.0" prefWidth="98.0" stylesheets="@../css/application.css" text="Cancelar" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="30" />
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <ImageView fitHeight="95.0" fitWidth="256.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../source/FesAragonEscudo.png" />
+         </image>
+      </ImageView>
+   </top>
+   <center>
+      <TableView fx:id="tblHabitacion" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmNumero" prefWidth="202.3999908566475" text="Numero" />
+          <TableColumn fx:id="clmCosto" prefWidth="251.2000274658203" text="Costo" />
+            <TableColumn fx:id="clmRefrigerador" prefWidth="151.199951171875" text="Refrigerador" />
+            <TableColumn fx:id="clmTipo" prefWidth="209.6000213623047" text="Tipo" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
